@@ -1,0 +1,4 @@
+*.pyc
+app/static/tmp
+bower_components
+*.cfg
