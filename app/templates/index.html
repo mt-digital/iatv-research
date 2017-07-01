@@ -1,15 +1,57 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>iatv-research</title>
+  <link href="static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <form action="/export" method="POST">
+  <div class="container">
     <h1>archive.org search results exporter</h1>
-    <label for="iatv-url">Enter IATV search URL</label>
-    <input id="iatv-url" class="form-control" type="text">
-    <input type="submit" value="Go">
-  </form>
+    
+    <h2>
+      <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+      How to use</h2>
+    <p>
+      This tool allows you to export .csv versions of Internet Archive search 
+      results for custom analyses.
+    </p>
+    <p>
+      <ol>
+        <li>
+          Navigate to the <a href="https://archive.org/tv/details">
+          Internet Archive's TV News Archive</a>. Use the search interface to
+          get a set of search results you want to export. 
+        </li>
+        <li>
+          When you have search results you want, copy the URL from your browser 
+          and paste it in the input box below. 
+        </li>
+        <li>
+          Press <i>Go</i> and a .csv-version download of the search results 
+        </li>
+      </ol>
+    </p>
+    
+    <form action="/export" method="POST">
+      <label for="iatv-url">Enter IATV search URL</label>
+      <input id="iatv-url" name="iatv-url" class="form-control" type="text">
+      <input style="width:100%" class="btn btn-primary" type="submit" value="Go">
+    </form>
+
+    <hr>
+
+    <p>
+      Need help? Exported search results not what you expected? Contact 
+      <a href="mailto:maturner01@gmail.com">Matt Turner</a>, the site creator and 
+      administrator.
+    </p>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
