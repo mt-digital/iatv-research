@@ -1,4 +1,3 @@
 # example configuration
-MONGODB_SETTINGS={'db': 'metacorps'}
 DEBUG = False
 SECRET_KEY = 'so secret you should change me'
